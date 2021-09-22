@@ -1,4 +1,5 @@
-// const  = require('./');
-// const  = require('./');
 
-// module.exports = {};
+module.exports = {
+    Workout: require("./Polls"),
+    Users: require("./Users")
+  };
