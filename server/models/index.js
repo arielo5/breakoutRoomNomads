@@ -1,5 +1,5 @@
 
 module.exports = {
-    Workout: require("./Polls"),
-    Users: require("./Users")
+    Workout: require("./Poll"),
+    Users: require("./User")
   };
