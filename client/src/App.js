@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
-import Newdle from './components/Nav'
-import Login from "./components/Login"
+import Newdle from './components/navbar/Nav'
+import Login from './components/login/Login'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
