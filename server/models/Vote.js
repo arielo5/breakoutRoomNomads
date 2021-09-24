@@ -5,7 +5,6 @@ const Schema = mongoose.Schema;
 const voteSchema = new Schema({
     user_id: {
         type: String,
-        required: true,
     },
     pollName: {
         type: String,

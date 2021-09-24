@@ -40,4 +40,15 @@ module.exports = {
     
         res.status(200).json(vote);
       },
+      async endPoll() {
+          const finishedPoll = await Poll.remove({_id: req.params.id})
+
+          if (!finishedPoll) {
+            return res.status(400).json({ message: 'Unable to end poll' });
+          }
+      
+          res.status(200).json(finishedPoll);
+      }
+
+
 }
