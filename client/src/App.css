@@ -1,3 +1,5 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
 * {
   --maincolor: #334257;
   --orange: #FF9B42;
@@ -7,7 +9,14 @@
 }
 
 body {
-    background-color: var(--maincolor)
+    background-color: var(--maincolor);
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.titlebg {
+    background-color: var(--tertiary);
+    color: var(--orange);
 }
 
 .newdleLogo {
