@@ -16,6 +16,13 @@ const typeDefs = gql`
       pollOp: Array
   }
  
+  type Vote {
+    _id: ID
+    user_id: String
+    pollName: String
+    voteArray: Array
+  }
+
   type Auth {
     token: ID!
     user: User
