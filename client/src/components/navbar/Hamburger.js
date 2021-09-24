@@ -16,9 +16,6 @@ export default function Hamburger() {
             <li>About</li>
           </a>
           <a >
-            <li>Info</li>
-          </a>
-          <a >
             <li>Contact</li>
           </a>
         </ul>

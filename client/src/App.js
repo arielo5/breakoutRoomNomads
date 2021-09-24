@@ -2,8 +2,8 @@
 import "./App.css";
 import React from "react";
 import HomepageLogo from "./components/HomepageLogo";
-import Login from "./components/Login";
-import Hamburger from "./components/Hamburger";
+import Login from "./components/login/Login";
+import Hamburger from "./components/navbar/Hamburger";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
@@ -23,7 +23,10 @@ function App() {
               <HomepageLogo />
               <Login />
             </Route>
-            <Route></Route>
+            <Route exact path='/poll'>
+
+        
+            </Route>
           </Switch>
         </div>
       </Router>
