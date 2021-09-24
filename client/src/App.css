@@ -14,9 +14,36 @@ body {
     min-width: 100vw;
 }
 
+.footer {
+    background-color: var(--tertiary);
+    color: var(--white);
+}
+
 .titlebg {
     background-color: var(--tertiary);
     color: var(--orange);
+}
+
+.subtitle-text {
+    color: var(--white);
+}
+
+.content {
+    margin-top: 25px;
+}
+
+.footlogo {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 28px;
+}
+
+.instructions {
+    background-color: var(--tertiary);
+    color: var(--white);
+}
+
+.createdate {
+    
 }
 
 .newdleLogo {
@@ -27,6 +54,15 @@ body {
     justify-content: center;
     align-content: center;
     padding: 0px;
+}
+
+.newdleThumb {
+    font-family: 'Berkshire Swash', cursive;
+    color: var(--white);
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
 }
 
 .loginContainer {
