@@ -1,13 +1,14 @@
+
 import "./App.css";
 import React from "react";
-import Newdle from './components/Nav'
-import Login from "./components/Login"
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-
+import HomepageLogo from "./components/HomepageLogo";
+import Login from "./components/Login";
+import Hamburger from "./components/Hamburger";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: '/graphql',
+  uri: "/graphql",
   cache: new InMemoryCache(),
 });
 
@@ -18,12 +19,11 @@ function App() {
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Switch>
             <Route exact path="/">
-              <Newdle />
+            <Hamburger />
+              <HomepageLogo />
               <Login />
             </Route>
-            <Route>
-              
-            </Route>
+            <Route></Route>
           </Switch>
         </div>
       </Router>
