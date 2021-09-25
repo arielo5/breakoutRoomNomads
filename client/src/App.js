@@ -3,7 +3,11 @@ import "./App.css";
 import React from "react";
 import HomepageLogo from "./components/HomepageLogo";
 import Login from "./components/login/Login";
+import Title from "./components/title/title";
+import VotePage from "./components/votePage/votePage";
 import Hamburger from "./components/navbar/Hamburger";
+import LogoThumb from "./components/logoThumb/logoThumb";
+import Footer from "./components/footer/footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
@@ -23,9 +27,12 @@ function App() {
               <HomepageLogo />
               <Login />
             </Route>
-            <Route exact path='/poll'>
-
-        
+            <Route exact path="/poll">
+              <Hamburger />
+              <LogoThumb />
+              <Title />
+              <VotePage />
+              <Footer />
             </Route>
           </Switch>
         </div>
