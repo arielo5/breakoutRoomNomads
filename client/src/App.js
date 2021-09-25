@@ -6,6 +6,7 @@ import Login from "./components/login/Login";
 import Title from "./components/title/title";
 import VotePage from "./components/votePage/votePage";
 import Hamburger from "./components/navbar/Hamburger";
+import LoggedInHamburger from "./components/navbar/LoggedInHamburger"
 import LogoThumb from "./components/logoThumb/logoThumb";
 import Footer from "./components/footer/footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -28,7 +29,7 @@ function App() {
               <Login />
             </Route>
             <Route exact path="/poll">
-              <Hamburger />
+              <LoggedInHamburger />
               <LogoThumb />
               <Title />
               <VotePage />

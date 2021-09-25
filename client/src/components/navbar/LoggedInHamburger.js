@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-export default function Hamburger() {
+export default function LoggedInHamburger() {
   return (
     <nav role="navigation">
       <div id="menuToggle">
@@ -11,7 +11,7 @@ export default function Hamburger() {
         <span></span>
         <ul id="menu">
           <NavLink to='/'>
-            <li>Home</li>
+            <li>Logout</li>
           </NavLink>
           <NavLink to=''>
             <li>About</li>
