@@ -1,3 +1,5 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
 * {
   --maincolor: #334257;
   --orange: #FF9B42;
@@ -7,17 +9,60 @@
 }
 
 body {
-    background-color: var(--maincolor)
+    background-color: var(--maincolor);
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.footer {
+    background-color: var(--tertiary);
+    color: var(--white);
+}
+
+.titlebg {
+    background-color: var(--tertiary);
+    color: var(--orange);
+}
+
+.subtitle-text {
+    color: var(--white);
+}
+
+.content {
+    margin-top: 25px;
+}
+
+.footlogo {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 28px;
+}
+
+.instructions {
+    background-color: var(--tertiary);
+    color: var(--white);
+}
+
+.createdate {
+    font-size: 14px;
 }
 
 .newdleLogo {
     font-family: 'Berkshire Swash', cursive;
     color: var(--white);
-    font-size: 400px;
+    font-size: 300px;
     display: flex;
     justify-content: center;
     align-content: center;
     padding: 0px;
+}
+
+.newdleThumb {
+    font-family: 'Berkshire Swash', cursive;
+    color: var(--white);
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
 }
 
 .loginContainer {
@@ -32,11 +77,14 @@ body {
     color: var(--orange);
     font-size: 50px;
 }
+.margin {
+  margin: 5px 5px;
+}
 
 .flip-card {
     background-color: var(--maincolor);
     width: 300px;
-    height: 200px;
+    height: 400px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
   
@@ -54,6 +102,7 @@ body {
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
+  
   
   /* Position the front and back side */
   .flip-card-front, .flip-card-back {
@@ -77,6 +126,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    font-size: 15px;
     background-color: var(--tertiary);
     color: var(--white);
     border-radius: 10px;

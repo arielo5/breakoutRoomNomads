@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Login() {
+  
   return (
     <div className="loginContainer">
       <div className="login">
@@ -10,7 +11,11 @@ export default function Login() {
               <div>Login</div>
             </div>
             <div className="flip-card-back">
-              <div>Back</div>
+            <div className="margin">Email:</div>
+              <input className="margin"></input>
+              <div className="margin">Password:</div>
+              <input className="margin"></input>
+              <button className="margin">Let's Go!</button>
             </div>
           </div>
         </div>
@@ -22,8 +27,13 @@ export default function Login() {
               <div>Signup</div>
             </div>
             <div className="flip-card-back">
-              <div>Back</div>
-              
+              <div className="margin">Email:</div>
+              <input className="margin"></input>
+              <div className="margin">Password:</div>
+              <input className="margin"></input>
+              <div className="margin">Confirm Password:</div>
+              <input className="margin"></input>
+              <button className="margin">Let's Go!</button>
             </div>
           </div>
         </div>
