@@ -4,8 +4,8 @@ const secret = 'keepitsecretkeepitsafe-gandalfthegrey';
 const expiration = '1h';
 
 module.exports = {
-    signToken: function ({ email, firstname, lastname, _id }) {
-        const payload = { email, firstname, lastname, _id };
+    signToken: function ({ email, firstName, lastName, _id }) {
+        const payload = { email, firstName, lastName, _id };
         return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
     },
 };
