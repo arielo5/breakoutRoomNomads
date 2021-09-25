@@ -1,6 +1,7 @@
 const { User } = require("../models");
 const { signToken } = require("../utils/auth");
 const { AuthenticationError } = require("apollo-server-express");
+const { convertNodeHttpToRequest } = require("apollo-server-core");
 
 const resolvers = {
     Query: {
@@ -18,9 +19,7 @@ const resolvers = {
     Mutation: {
 
       addUser: async (parent, args) => {
-        console.log("Creating!", args);
         const user = await User.create(args);
-        console.log("Created!", user);
         const token = await signToken(user);
   
         return { token, user };
@@ -42,7 +41,30 @@ const resolvers = {
         const token = signToken(user);
         return { token, user };
       },
-    },
+
+      savePoll: async (parent, {input}, context) =>{
+        if (context.user) {
+          const updateUser = await User.findByIdAndUpdate(
+            { _id: context.user._id },
+            { $push: { savedPolls: input } },
+            { new: true }
+          );
+          return updateUser;
+        }
+        throw new AuthenticationError("You need to be log in!");
+      },
+
+      removePoll: async ( parent, args, context ) => {
+        if (context.user) {
+          return User.findByIdAndUpdate(
+            { _id: context.user._id },
+            {$pull: { savedPolls: { pollId: args.pollId }}},
+            { new: true }
+          );
+        }
+        throw new AuthenticationError("You need to be log in!");
+      }
+    }
   };
   
   module.exports = resolvers;
