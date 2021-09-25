@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Hamburger() {
   return (
@@ -9,15 +10,15 @@ export default function Hamburger() {
         <span></span>
         <span></span>
         <ul id="menu">
-          <a >
+          <NavLink to='/'>
             <li>Home</li>
-          </a>
-          <a >
+          </NavLink>
+          <NavLink to=''>
             <li>About</li>
-          </a>
-          <a >
+          </NavLink>
+          <NavLink to=''>
             <li>Contact</li>
-          </a>
+          </NavLink>
         </ul>
       </div>
     </nav>
