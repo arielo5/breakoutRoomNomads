@@ -27,6 +27,10 @@ export default function Login() {
               <div>Signup</div>
             </div>
             <div className="flip-card-back">
+            <div className="margin">First Name:</div>
+              <input className="margin"></input>
+              <div className="margin">Last Name:</div>
+              <input className="margin"></input>
               <div className="margin">Email:</div>
               <input className="margin"></input>
               <div className="margin">Password:</div>
