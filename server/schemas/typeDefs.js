@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type User {
@@ -6,21 +6,27 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     email: String
-    password: String
-   
+    pollCount: Int
+    savedPolls: [Poll]   
   }
 
-  type Poll {
-      _id: ID
-      pollName: String
-      pollOp: Array
+  input Poll {
+    pollId: ID
+    pollName: String
+    pollOp: [String]
+  }
+
+  input PollInput {
+    pollId: String
+    pollName: String
+    pollOp: [String]
   }
  
-  type Vote {
-    _id: ID
+  input Vote {
+    voteId: ID
     user_id: String
     pollName: String
-    voteArray: Array
+    voteArray: Array // Is this array a String or a Int? //
   }
 
   type Auth {
@@ -30,12 +36,14 @@ const typeDefs = gql`
 
   type Query {
     users: [User]
-    user(username: String!): User
+    user: User
   }
 
   type Mutation {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    savePoll(input: PollInput): User
+    removePoll(pollId: ID!): User
   }
 `;
 
