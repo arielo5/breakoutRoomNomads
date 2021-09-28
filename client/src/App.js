@@ -10,10 +10,25 @@ import LoggedInHamburger from "./components/navbar/LoggedInHamburger"
 import LogoThumb from "./components/logoThumb/logoThumb";
 import Footer from "./components/footer/footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from "@apollo/react-hooks";
+import { setContext } from '@apollo/client/link/context';
+
+const link = createHttpLink({
+  uri: '/graphql'
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("id_token");
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : ''
+    }
+  }
+});
 
 const client = new ApolloClient({
-  uri: "/graphql",
+  link: authLink.concat(link),
   cache: new InMemoryCache(),
 });
 

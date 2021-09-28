@@ -5,9 +5,7 @@ const typeDefs = gql`
     _id: ID
     firstName: String
     lastName: String
-    email: String
-    pollCount: Int
-    savedPolls: [Poll]   
+    email: String 
   }
 
   input Poll {
@@ -26,7 +24,7 @@ const typeDefs = gql`
     voteId: ID
     user_id: String
     pollName: String
-    voteArray: Array // Is this array a String or a Int? //
+    voteArray: [String]
   }
 
   type Auth {
