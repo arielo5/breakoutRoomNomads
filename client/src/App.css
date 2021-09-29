@@ -290,3 +290,22 @@ body {
 {
   transform: none;
 }
+
+#createNewPoll {
+  width: 300px;
+  margin: 50px;
+  padding: 10px;
+  background-color: var(--tertiary);
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 50px;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+}
