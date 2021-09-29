@@ -8,6 +8,7 @@ import Hamburger from "./components/navbar/Hamburger";
 import LoggedInHamburger from "./components/navbar/LoggedInHamburger";
 import LogoThumb from "./components/logoThumb/logoThumb";
 import Footer from "./components/footer/footer";
+import Dashboard from "./components/dashboard/Dashboard";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   ApolloClient,
@@ -55,9 +56,6 @@ function App() {
               <Route exact path="/">
                 <Hamburger />
                 <HomepageLogo />
-                <div>
-                  <h1>THE MOTHER F****** HOME PAGE</h1>
-                </div>
               </Route>
               <Route exact path="/poll">
                 <LoggedInHamburger />
@@ -66,6 +64,12 @@ function App() {
                 <VotePage />
                 <Footer />
               </Route>
+              <Route exact path="/dashboard">
+                <LoggedInHamburger />
+                <LogoThumb />
+                <Dashboard />
+                <Footer />
+            </Route>
             </Switch>
           </div>
         </Router>
