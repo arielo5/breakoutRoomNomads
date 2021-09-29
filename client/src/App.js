@@ -8,6 +8,7 @@ import Hamburger from "./components/navbar/Hamburger";
 import LoggedInHamburger from "./components/navbar/LoggedInHamburger";
 import LogoThumb from "./components/logoThumb/logoThumb";
 import Footer from "./components/footer/footer";
+import Dashboard from "./components/dashboard/Dashboard";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   ApolloClient,
@@ -17,6 +18,7 @@ import {
 } from "@apollo/react-hooks";
 import { setContext } from "@apollo/client/link/context";
 import auth from "./utils/auth";
+
 
 const link = createHttpLink({
   uri: "/graphql",
@@ -42,34 +44,31 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      {!isLoggedIn ? (
-        <>
-          <HomepageLogo />
-          
-          <Login setLoggedIn={() => {console.log("if there is justice in the universe this will print"); setIsLoggedIn(true);}} />
-        </>
-      ) : (
-        <Router>
-          <div className="flex-column justify-center align-center min-100-vh bg-primary">
-            <Switch>
-              <Route exact path="/">
-                <Hamburger />
-                <HomepageLogo />
-                <div>
-                  <h1>THE MOTHER F****** HOME PAGE</h1>
-                </div>
-              </Route>
-              <Route exact path="/poll">
-                <LoggedInHamburger />
-                <LogoThumb />
-                <Title />
-                <VotePage />
-                <Footer />
-              </Route>
-            </Switch>
-          </div>
-        </Router>
-      )}
+
+      <Router>
+        <div className="flex-column justify-center align-center min-100-vh bg-primary">
+          <Switch>
+            <Route exact path="/">
+              <Hamburger />
+              <HomepageLogo />
+              <Login />
+            </Route>
+            <Route exact path="/poll">
+              <LoggedInHamburger />
+              <LogoThumb />
+              <Title />
+              <VotePage />
+              <Footer />
+            </Route>
+            <Route exact path="/dashboard">
+              <LoggedInHamburger />
+              <LogoThumb />
+              <Dashboard />
+              <Footer />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </ApolloProvider>
   );
 }
