@@ -53,16 +53,16 @@ function Contact() {
                             </div>
                             <div className="flip-card-back">
                                 <ul>
-                                    <a className="contactLink aL" href="mailto:claholla@gmail.com">
-                                        <FontAwesomeIcon class='icon' icon={faInbox} /><strong>claholla@gmail.com</strong></a>
+                                    <div><a className="contactLink aL" href="mailto:claholla@gmail.com">
+                                        <FontAwesomeIcon class='icon' icon={faInbox} /><strong>claholla@gmail.com</strong></a></div>
 
-                                    <a className="contactLink aL" href="https://github.com/Claholla" target="_blank" rel="noreferrer">
+                                    <div><a className="contactLink aL" href="https://github.com/Claholla" target="_blank" rel="noreferrer">
                                         <FontAwesomeIcon class='icon' icon={faGithub} />
-                                        <strong>github.com/Claholla</strong></a>
+                                        <strong>github.com/Claholla</strong></a></div>
 
-                                    <a className="contactLink aL" href="https://www.linkedin.com/in/clayholland/" target="_blank">
+                                    <div><a className="contactLink aL" href="https://www.linkedin.com/in/clayholland/" target="_blank">
                                         <FontAwesomeIcon class='icon' icon={faLinkedin} />
-                                        <strong>linkedin.com/in/clayholland/</strong></a>
+                                        <strong>linkedin.com/in/clayholland/</strong></a></div>
                                 </ul>
                             </div>
                         </div>
@@ -78,16 +78,16 @@ function Contact() {
                             </div>
                             <div className="flip-card-back">
                                 <ul>
-                                    <a className="contactLink aL" href="mailto:johnhope354@gmail.com">
-                                        <FontAwesomeIcon class='icon' icon={faInbox} /><strong>johnhope354@gmail.com</strong></a>
+                                    <div><a className="contactLink aL" href="mailto:johnhope354@gmail.com">
+                                        <FontAwesomeIcon class='icon' icon={faInbox} /><strong>johnhope354@gmail.com</strong></a></div>
 
-                                    <a className="contactLink aL" href="https://github.com/hope1407" target="_blank" rel="noreferrer">
+                                    <div><a className="contactLink aL" href="https://github.com/hope1407" target="_blank" rel="noreferrer">
                                         <FontAwesomeIcon class='icon' icon={faGithub} />
-                                        <strong>github.com/hope1407</strong></a>
+                                        <strong>github.com/hope1407</strong></a></div>
 
-                                    <a className="contactLink aL" href="https://www.linkedin.com/in/john-hope-426562121/" target="_blank">
+                                    <div><a className="contactLink aL" href="https://www.linkedin.com/in/john-hope-426562121/" target="_blank">
                                         <FontAwesomeIcon class='icon' icon={faLinkedin} />
-                                        <strong>linkedin.com/in/john-hope-426562121/</strong></a>
+                                        <strong>linkedin.com/in/john-hope</strong></a></div>
                                 </ul>
                             </div>
                         </div>
@@ -103,14 +103,14 @@ function Contact() {
                             </div>
                             <div className="flip-card-back">
                                 <ul>
-                                    <a className="contactLink aL" href="mailto:miernickielijah@gmail.com">
-                                        <FontAwesomeIcon class='icon' icon={faInbox} /><strong>miernickielijah@gmail.com</strong></a>
+                                    <div><a className="contactLink aL" href="mailto:miernickielijah@gmail.com">
+                                        <FontAwesomeIcon class='icon' icon={faInbox} /><strong>miernickielijah@gmail.com</strong></a></div>
 
-                                    <a className="contactLink aL" href="https://github.com/MiernickiElijah" target="_blank" rel="noreferrer">
-                                        <FontAwesomeIcon class='icon' icon={faGithub} /><strong>github.com/MiernickiElijah</strong></a>
+                                    <div><a className="contactLink aL" href="https://github.com/MiernickiElijah" target="_blank" rel="noreferrer">
+                                        <FontAwesomeIcon class='icon' icon={faGithub} /><strong>github.com/MiernickiElijah</strong></a></div>
 
-                                    <a className="contactLink aL" href="https://www.linkedin.com/in/miernickielijah/" target="_blank">
-                                        <FontAwesomeIcon class='icon' icon={faLinkedin} /><strong>linkedIn.com/in/miernickielijah</strong></a>
+                                    <div><a className="contactLink aL" href="https://www.linkedin.com/in/miernickielijah/" target="_blank">
+                                        <FontAwesomeIcon class='icon' icon={faLinkedin} /><strong>linkedIn.com/in/miernickielijah</strong></a></div>
                                 </ul>
                             </div>
                         </div>
@@ -126,16 +126,16 @@ function Contact() {
                             </div>
                             <div className="flip-card-back">
                                 <ul>
-                                    <a className="contactLink aL" href="mailto:ari.martinez.tiru@gmail.com">
-                                        <FontAwesomeIcon class='icon' icon={faInbox} /><strong>ari.martinez.tiru@gmail.com</strong></a>
+                                    <div><a className="contactLink aL" href="mailto:ari.martinez.tiru@gmail.com">
+                                        <FontAwesomeIcon class='icon' icon={faInbox} /><strong>ari.martinez.tiru@gmail.com</strong></a></div>
 
-                                    <a className="contactLink aL" href="https://github.com/arielo5" target="_blank" rel="noreferrer">
+                                    <div><a className="contactLink aL" href="https://github.com/arielo5" target="_blank" rel="noreferrer">
                                         <FontAwesomeIcon class='icon' icon={faGithub} />
-                                        <strong>github.com/arielo5</strong></a>
+                                        <strong>github.com/arielo5</strong></a></div>
 
-                                    <a className="contactLink aL" href="https://www.linkedin.com/in/ariel-martinez-tiru/" target="_blank">
+                                    <div><a className="contactLink aL" href="https://www.linkedin.com/in/ariel-martinez-tiru/" target="_blank">
                                         <FontAwesomeIcon class='icon' icon={faLinkedin} />
-                                        <strong>linkedin.com/in/ariel-martinez-tiru/</strong></a>
+                                        <strong>linkedin.com/in/ariel-martinez-tiru/</strong></a></div>
                                 </ul>
                             </div>
                         </div>
