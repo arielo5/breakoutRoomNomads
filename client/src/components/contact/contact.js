@@ -123,8 +123,8 @@ function Contact() {
                             </div>
                             <div className="flip-card-back">
                                 <ul className="nav nav-pills nav-flush flex-column mb-auto text-center" id="contactlist">
-                                    <a className="contactLink aL" href="mailto:">
-                                        <FontAwesomeIcon class='icon' icon={faInbox} /><strong></strong></a>
+                                    <a className="contactLink aL" href="mailto:ari.martinez.tiru@gmail.com">
+                                        <FontAwesomeIcon class='icon' icon={faInbox} /><strong>ari.martinez.tiru@gmail.com</strong></a>
 
                                     <a className="contactLink aL" href="https://github.com/arielo5" target="_blank" rel="noreferrer">
                                         <FontAwesomeIcon class='icon' icon={faGithub} />
