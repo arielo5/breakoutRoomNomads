@@ -1,4 +1,5 @@
 import React from "react";
+import Container from "../container/container";
 
 export default function VotePage() {
   return (
@@ -24,7 +25,7 @@ export default function VotePage() {
     </div>
     <div className="column is-1"></div>
     <div className="column is-5">
-        Third column
+        <Container />
     </div>
     <div className="column is-1"></div>
 </div>
