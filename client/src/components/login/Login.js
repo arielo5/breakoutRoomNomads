@@ -15,7 +15,7 @@ export default function Login(props) {
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [login, { data: loggedIn, error }] = useMutation(LOGIN);
-  const [addUser, { data: userCreated, loading, error: err }] =
+  const [addUser, { data: userCreated, error: err }] =
     useMutation(ADD_USER);
 
   const handleInputChange = (event) => {
