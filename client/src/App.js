@@ -19,7 +19,6 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import auth from "./utils/auth";
 
-
 const link = createHttpLink({
   uri: "/graphql",
 });
@@ -44,31 +43,37 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-
-      <Router>
-        <div className="flex-column justify-center align-center min-100-vh bg-primary">
-          <Switch>
-            <Route exact path="/">
-              <Hamburger />
-              <HomepageLogo />
-              <Login />
+      {!isLoggedIn ? (
+        <>
+          <HomepageLogo />
+          
+          <Login setLoggedIn={() => {console.log("if there is justice in the universe this will print"); setIsLoggedIn(true);}} />
+        </>
+      ) : (
+        <Router>
+          <div className="flex-column justify-center align-center min-100-vh bg-primary">
+            <Switch>
+              <Route exact path="/">
+                <Hamburger />
+                <HomepageLogo />
+              </Route>
+              <Route exact path="/poll">
+                <LoggedInHamburger />
+                <LogoThumb />
+                <Title />
+                <VotePage />
+                <Footer />
+              </Route>
+              <Route exact path="/dashboard">
+                <LoggedInHamburger />
+                <LogoThumb />
+                <Dashboard />
+                <Footer />
             </Route>
-            <Route exact path="/poll">
-              <LoggedInHamburger />
-              <LogoThumb />
-              <Title />
-              <VotePage />
-              <Footer />
-            </Route>
-            <Route exact path="/dashboard">
-              <LoggedInHamburger />
-              <LogoThumb />
-              <Dashboard />
-              <Footer />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
+            </Switch>
+          </div>
+        </Router>
+      )}
     </ApolloProvider>
   );
 }
