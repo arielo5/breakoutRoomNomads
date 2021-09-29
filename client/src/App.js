@@ -9,6 +9,7 @@ import LoggedInHamburger from "./components/navbar/LoggedInHamburger";
 import LogoThumb from "./components/logoThumb/logoThumb";
 import Footer from "./components/footer/footer";
 import Dashboard from "./components/dashboard/Dashboard";
+import PollDisplay from "./components/pollDisplays/PollDisplay"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   ApolloClient,
@@ -59,6 +60,7 @@ function App() {
               <LoggedInHamburger />
               <LogoThumb />
               <Dashboard />
+              <PollDisplay />
               <Footer />
             </Route>
           </Switch>

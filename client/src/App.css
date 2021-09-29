@@ -305,7 +305,16 @@ body {
   font-size: 50px;
 }
 
-#buttonContainer {
+.dashboardcontainer {
   display: flex;
   justify-content: center;
+}
+
+#activePolls {
+  color: white;
+  font-size: 50px;
+}
+
+.custom-card {
+  margin: 100px
 }
