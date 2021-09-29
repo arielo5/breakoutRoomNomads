@@ -1,4 +1,3 @@
-
 import "./App.css";
 import React from "react";
 import HomepageLogo from "./components/HomepageLogo";
@@ -6,15 +5,21 @@ import Login from "./components/login/Login";
 import Title from "./components/title/title";
 import VotePage from "./components/votePage/votePage";
 import Hamburger from "./components/navbar/Hamburger";
-import LoggedInHamburger from "./components/navbar/LoggedInHamburger"
+import LoggedInHamburger from "./components/navbar/LoggedInHamburger";
 import LogoThumb from "./components/logoThumb/logoThumb";
 import Footer from "./components/footer/footer";
+import Dashboard from "./components/dashboard/Dashboard";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from "@apollo/react-hooks";
-import { setContext } from '@apollo/client/link/context';
+import {
+  ApolloClient,
+  ApolloProvider,
+  createHttpLink,
+  InMemoryCache,
+} from "@apollo/react-hooks";
+import { setContext } from "@apollo/client/link/context";
 
 const link = createHttpLink({
-  uri: '/graphql'
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -22,9 +27,9 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : ''
-    }
-  }
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  };
 });
 
 const client = new ApolloClient({
@@ -39,7 +44,7 @@ function App() {
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Switch>
             <Route exact path="/">
-            <Hamburger />
+              <Hamburger />
               <HomepageLogo />
               <Login />
             </Route>
@@ -48,6 +53,12 @@ function App() {
               <LogoThumb />
               <Title />
               <VotePage />
+              <Footer />
+            </Route>
+            <Route exact path="/dashboard">
+              <LoggedInHamburger />
+              <LogoThumb />
+              <Dashboard />
               <Footer />
             </Route>
           </Switch>
