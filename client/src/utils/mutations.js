@@ -9,12 +9,6 @@ export const LOGIN = gql`
         firstName
         lastName
         email
-        pollCount
-        savedPolls {
-          pollId
-          pollName
-          pollOp
-        }
       }
     }
   }
@@ -39,12 +33,6 @@ export const ADD_USER = gql`
         firstName
         lastName
         email
-        pollCount
-        savedPolls {
-          pollId
-          pollName
-          pollOp
-        }
       }
     }
   }

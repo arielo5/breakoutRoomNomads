@@ -81,6 +81,7 @@ body {
 }
 
 .flip-card {
+
   background-color: var(--maincolor);
   width: 300px;
   height: 400px;
@@ -139,6 +140,7 @@ body {
 }
 
 /*
+
  * Made by Erik Terwan
  * 24th of November 2015
  * MIT License
@@ -295,3 +297,23 @@ body {
   margin-top: 100px;
   margin-left: 100px;
 }
+
+#createNewPoll {
+  width: 300px;
+  margin: 50px;
+  padding: 10px;
+  background-color: var(--tertiary);
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 50px;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
