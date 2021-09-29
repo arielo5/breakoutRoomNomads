@@ -16,7 +16,7 @@ export default function Hamburger() {
           <NavLink to=''>
             <li>About</li>
           </NavLink>
-          <NavLink to=''>
+          <NavLink to='/contact'>
             <li>Contact</li>
           </NavLink>
         </ul>
