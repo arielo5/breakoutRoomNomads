@@ -8,9 +8,7 @@ import Hamburger from "./components/navbar/Hamburger";
 import LoggedInHamburger from "./components/navbar/LoggedInHamburger";
 import LogoThumb from "./components/logoThumb/logoThumb";
 import Footer from "./components/footer/footer";
-import Contact from "./components/contact/contact";
 import Dashboard from "./components/dashboard/Dashboard";
-
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   ApolloClient,
@@ -41,24 +39,36 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(auth.loggedIn());
+  const [setIsLoggedIn] = useState(auth.loggedIn());
 
   return (
     <ApolloProvider client={client}>
 
-      {!isLoggedIn ? (
-        <>
-          <HomepageLogo />
-          
-          <Login setLoggedIn={() => {console.log("if there is justice in the universe this will print"); setIsLoggedIn(true);}} />
-        </>
-      ) : (
         <Router>
           <div className="flex-column justify-center align-center min-100-vh bg-primary">
             <Switch>
               <Route exact path="/">
                 <Hamburger />
                 <HomepageLogo />
+
+                <>
+                  <Login
+                    setLoggedIn={() => {
+                      console.log(
+                        "if there is justice in the universe this will print"
+                      );
+                      setIsLoggedIn(true);
+                    }}
+                  />
+                </>
+              </Route>
+              {auth.loggedIn() ? (
+                <>
+              <Route exact path="/dashboard">
+                <LoggedInHamburger />
+                <LogoThumb />
+                <Dashboard />
+                <Footer />
               </Route>
               <Route exact path="/poll">
                 <LoggedInHamburger />
@@ -67,23 +77,26 @@ function App() {
                 <VotePage />
                 <Footer />
               </Route>
-              <Route exact path="/dashboard">
-                <LoggedInHamburger />
-                <LogoThumb />
-                <Dashboard />
-                <Footer />
-        
-               </Route>
-               <Route exact path="/contact">
-                <LoggedInHamburger />
-                <Contact />
-                <Footer />
+              </>):(
+                <Route exact path="/">
+                <Hamburger />
+                <HomepageLogo />
 
-            </Route>
+                <>
+                  <Login
+                    setLoggedIn={() => {
+                      console.log(
+                        "if there is justice in the universe this will print"
+                      );
+                      setIsLoggedIn(true);
+                    }}
+                  />
+                </>
+              </Route>
+              )}
             </Switch>
           </div>
         </Router>
-      )}
     </ApolloProvider>
   );
 }
