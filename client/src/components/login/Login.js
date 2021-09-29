@@ -18,6 +18,10 @@ export default function Login(props) {
   const [addUser, { data: userCreated, error: err }] =
     useMutation(ADD_USER);
 
+  //removed loading from object in line 18 --> as it is never called
+  // const [addUser, { data: userCreated, loading, error: err }] =
+  // useMutation(ADD_USER);
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
