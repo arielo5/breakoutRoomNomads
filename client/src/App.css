@@ -289,3 +289,9 @@ body {
   height: fit-content;
   width: fit-content;
 }
+
+#contactColumn {
+  flex-wrap: wrap;
+  margin-top: 100px;
+  margin-left: 100px;
+}

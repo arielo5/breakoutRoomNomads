@@ -15,7 +15,7 @@ import eli from '../../Eli.jfif'
 function Contact() {
     return (
         <div className="peopleContainer">
-            <div className="columns">
+            <div className="columns" id="contactColumn">
                 <div className='column'>
                     <div className="flip-card">
                         <div className="flip-card-inner">
@@ -24,17 +24,20 @@ function Contact() {
                                 <img class='profilepics' src={rhyce} />
                             </div>
                             <div className="flip-card-back">
-                                <ul className="nav nav-pills nav-flush flex-column mb-auto text-center" id="contactlist">
-                                    <a className="contactLink aL" href="mailto:a.r.erickson.28@gmail.com">
+                                <ul>
+                                    <div><a className="contactLink aL" href="mailto:a.r.erickson.28@gmail.com">
                                         <FontAwesomeIcon class='icon' icon={faInbox} /><strong>a.r.erickson.28@gmail.com</strong></a>
+                                    </div>
 
-                                    <a className="contactLink aL" href="https://github.com/arerickson28" target="_blank" rel="noreferrer">
+                                    <div><a className="contactLink aL" href="https://github.com/arerickson28" target="_blank" rel="noreferrer">
                                         <FontAwesomeIcon class='icon' icon={faGithub} />
                                         <strong>github.com/arerickson28</strong></a>
+                                    </div>
 
-                                    <a className="contactLink aL" href="https://www.linkedin.com/in/rhyce-erickson-a74943a0/" target="_blank">
+                                    <div><a className="contactLink aL" href="https://www.linkedin.com/in/rhyce-erickson-a74943a0/" target="_blank">
                                         <FontAwesomeIcon class='icon' icon={faLinkedin} />
                                         <strong>https://www.linkedin.com/in/rhyce-erickson</strong></a>
+                                    </div>
                                 </ul>
                             </div>
                         </div>
@@ -49,7 +52,7 @@ function Contact() {
                                 <img class='profilepics' src={clay} />
                             </div>
                             <div className="flip-card-back">
-                                <ul className="nav nav-pills nav-flush flex-column mb-auto text-center" id="contactlist">
+                                <ul>
                                     <a className="contactLink aL" href="mailto:claholla@gmail.com">
                                         <FontAwesomeIcon class='icon' icon={faInbox} /><strong>claholla@gmail.com</strong></a>
 
@@ -74,7 +77,7 @@ function Contact() {
                                 <img class='profilepics' src={john} />
                             </div>
                             <div className="flip-card-back">
-                                <ul className="nav nav-pills nav-flush flex-column mb-auto text-center" id="contactlist">
+                                <ul>
                                     <a className="contactLink aL" href="mailto:johnhope354@gmail.com">
                                         <FontAwesomeIcon class='icon' icon={faInbox} /><strong>johnhope354@gmail.com</strong></a>
 
@@ -122,7 +125,7 @@ function Contact() {
                                 <img class='profilepics' src={ari} />
                             </div>
                             <div className="flip-card-back">
-                                <ul className="nav nav-pills nav-flush flex-column mb-auto text-center" id="contactlist">
+                                <ul>
                                     <a className="contactLink aL" href="mailto:ari.martinez.tiru@gmail.com">
                                         <FontAwesomeIcon class='icon' icon={faInbox} /><strong>ari.martinez.tiru@gmail.com</strong></a>
 
