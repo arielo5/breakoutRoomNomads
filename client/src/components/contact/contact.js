@@ -24,7 +24,7 @@ function Contact() {
                                 <img class='profilepics' src={rhyce} alt='rhyce' />
                             </div>
                             <div className="flip-card-back">
-                                <ul>16880hca
+                                <ul>
                                     <div><a className="contactLink aL" href="mailto:a.r.erickson.28@gmail.com">
                                         <FontAwesomeIcon class='icon' icon={faInbox} /><strong>a.r.erickson.28@gmail.com</strong></a>
                                     </div>
