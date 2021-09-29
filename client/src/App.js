@@ -9,6 +9,7 @@ import Hamburger from "./components/navbar/Hamburger";
 import LoggedInHamburger from "./components/navbar/LoggedInHamburger"
 import LogoThumb from "./components/logoThumb/logoThumb";
 import Footer from "./components/footer/footer";
+import Contact from "./components/contact/contact";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
@@ -24,7 +25,7 @@ function App() {
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Switch>
             <Route exact path="/">
-            <Hamburger />
+              <Hamburger />
               <HomepageLogo />
               <Login />
             </Route>
@@ -33,6 +34,11 @@ function App() {
               <LogoThumb />
               <Title />
               <VotePage />
+
+            </Route>
+            <Route exact path="/contact">
+              <LoggedInHamburger />
+              <Contact />
               <Footer />
             </Route>
           </Switch>

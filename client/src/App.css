@@ -2,143 +2,143 @@
 
 * {
   --maincolor: #334257;
-  --orange: #FF9B42;
-  --tertiary: #548ca8;;
+  --orange: #ff9b42;
+  --tertiary: #548ca8;
   --bloop: #00aeef;
-  --white: #EEEEEE;
+  --white: #eeeeee;
 }
 
 body {
-    background-color: var(--maincolor);
-    min-height: 100vh;
-    min-width: 100vw;
+  background-color: var(--maincolor);
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .footer {
-    background-color: var(--tertiary);
-    color: var(--white);
+  background-color: var(--tertiary);
+  color: var(--white);
 }
 
 .titlebg {
-    background-color: var(--tertiary);
-    color: var(--orange);
+  background-color: var(--tertiary);
+  color: var(--orange);
 }
 
 .subtitle-text {
-    color: var(--white);
+  color: var(--white);
 }
 
 .content {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .footlogo {
-    font-family: 'Berkshire Swash', cursive;
-    font-size: 28px;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 28px;
 }
 
 .instructions {
-    background-color: var(--tertiary);
-    color: var(--white);
+  background-color: var(--tertiary);
+  color: var(--white);
 }
 
 .createdate {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .newdleLogo {
-    font-family: 'Berkshire Swash', cursive;
-    color: var(--white);
-    font-size: 300px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 0px;
+  font-family: "Berkshire Swash", cursive;
+  color: var(--white);
+  font-size: 300px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0px;
 }
 
 .newdleThumb {
-    font-family: 'Berkshire Swash', cursive;
-    color: var(--white);
-    font-size: 80px;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
+  font-family: "Berkshire Swash", cursive;
+  color: var(--white);
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 }
 
 .loginContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .login {
-    font-family: 'Architects Daughter', cursive;
-    display: flex;
-    color: var(--orange);
-    font-size: 50px;
+  font-family: "Architects Daughter", cursive;
+  display: flex;
+  color: var(--orange);
+  font-size: 50px;
 }
 .margin {
   margin: 5px 5px;
 }
 
 .flip-card {
-    background-color: var(--maincolor);
-    width: 300px;
-    height: 400px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #334257;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 15px;
-    background-color: var(--tertiary);
-    color: var(--white);
-    border-radius: 10px;
-    transform: rotateY(180deg);
-  }
+  background-color: var(--maincolor);
+  width: 300px;
+  height: 400px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
 
-  #burger {
-    color: var(--orange);
-    background-color: var(--white)
-  }
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
 
-  /*
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #334257;
+}
+
+/* Style the back side */
+.flip-card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 15px;
+  background-color: var(--tertiary);
+  color: var(--white);
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
+
+#burger {
+  color: var(--orange);
+  background-color: var(--white);
+}
+
+/*
  * Made by Erik Terwan
  * 24th of November 2015
  * MIT License
@@ -149,80 +149,71 @@ body {
  * prefixes.
  */
 
-#menuToggle
-{
+#menuToggle {
   display: block;
   position: relative;
   top: 50px;
   left: 50px;
-  
+
   z-index: 1;
-  
+
   -webkit-user-select: none;
   user-select: none;
 }
 
-#menuToggle a
-{
+#menuToggle a {
   text-decoration: none;
   color: var(--white);
-  
+
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
-{
-  color:var(--orange);
+#menuToggle a:hover {
+  color: var(--orange);
 }
 
-
-#menuToggle input
-{
+#menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
   top: -7px;
   left: -5px;
-  
+
   cursor: pointer;
-  
+
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
-  
+
   -webkit-touch-callout: none;
 }
 
 /*
  * Just a quick hamburger
  */
-#menuToggle span
-{
+#menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  
+
   background: #cdcdcd;
   border-radius: 3px;
-  
+
   z-index: 1;
-  
+
   transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
@@ -230,8 +221,7 @@ body {
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: var(--tertiary);
@@ -240,8 +230,7 @@ body {
 /*
  * But let's hide the middle one.
  */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
@@ -249,8 +238,7 @@ body {
 /*
  * Ohyeah and the last one should go the other direction
  */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
@@ -258,8 +246,7 @@ body {
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu
-{
+#menu {
   position: absolute;
   width: 50px;
   margin: -100px 0 0 -75px;
@@ -269,15 +256,14 @@ body {
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-  
+
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menu li
-{
+#menu li {
   padding: 10px 0;
   font-size: 22px;
 }
@@ -285,7 +271,21 @@ body {
 /*
  * And let's slide it in from the left
  */
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked ~ ul {
   transform: none;
+}
+
+/* Contact Component  */
+.contactName {
+  font-family: "Berkshire Swash", cursive;
+  color: var(--white);
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+}
+
+.profilepics {
+  height: fit-content;
+  width: fit-content;
 }
