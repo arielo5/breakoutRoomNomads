@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import HomepageLogo from "./components/HomepageLogo";
 import Login from "./components/login/Login";
 import Title from "./components/title/title";
@@ -17,6 +17,8 @@ import {
   InMemoryCache,
 } from "@apollo/react-hooks";
 import { setContext } from "@apollo/client/link/context";
+import auth from "./utils/auth";
+
 
 const link = createHttpLink({
   uri: "/graphql",
@@ -38,8 +40,11 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(auth.loggedIn());
+
   return (
     <ApolloProvider client={client}>
+
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Switch>
