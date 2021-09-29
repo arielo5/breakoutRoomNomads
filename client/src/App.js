@@ -49,8 +49,8 @@ function App() {
       {!isLoggedIn ? (
         <>
           <HomepageLogo />
-          
-          <Login setLoggedIn={() => {console.log("if there is justice in the universe this will print"); setIsLoggedIn(true);}} />
+
+          <Login setLoggedIn={() => { console.log("if there is justice in the universe this will print"); setIsLoggedIn(true); }} />
         </>
       ) : (
         <Router>
@@ -72,14 +72,14 @@ function App() {
                 <LogoThumb />
                 <Dashboard />
                 <Footer />
-        
-               </Route>
-               <Route exact path="/contact">
+
+              </Route>
+              <Route exact path="/contact">
                 <LoggedInHamburger />
                 <Contact />
                 <Footer />
 
-            </Route>
+              </Route>
             </Switch>
           </div>
         </Router>
