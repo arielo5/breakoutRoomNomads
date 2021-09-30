@@ -20,6 +20,9 @@ export default function LoggedInHamburger() {
           <NavLink to='/contact'>
             <li>Contact</li>
           </NavLink>
+          <NavLink to='/results'>
+            <li>Results</li>
+          </NavLink>
         </ul>
       </div>
     </nav>
