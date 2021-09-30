@@ -61,11 +61,11 @@ function App() {
                 />
               </>
             </Route>
-            {/* <Route exact path="/contact">
+            <Route exact path="/contact">
               <Hamburger />
               <Contact />
               <Footer />
-            </Route> */}
+            </Route>
             {auth.loggedIn() ? (
               <>
                 <Route exact path="/dashboard">
