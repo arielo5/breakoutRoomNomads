@@ -62,14 +62,14 @@ function App() {
               </>
             </Route>
             <Route exact path="/contact">
-              <Hamburger />
+              <LoggedInHamburger />
               <Contact />
               <Footer />
             </Route>
             {auth.loggedIn() ? (
               <>
                 <Route exact path="/dashboard">
-                  <LoggedInHamburger />
+                  <Hamburger />
                   <LogoThumb />
                   <Dashboard />
                   <Footer />
