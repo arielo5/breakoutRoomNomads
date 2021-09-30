@@ -82,7 +82,7 @@ function App() {
                   <Footer />
                 </Route>
                 <Route exact path="/contact">
-                  <LoggedInHamburger />
+                  <Hamburger />
                   <Contact />
                   <Footer />
                 </Route>
