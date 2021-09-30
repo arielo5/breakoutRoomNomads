@@ -10,6 +10,7 @@ import LoggedInHamburger from "./components/navbar/LoggedInHamburger";
 import LogoThumb from "./components/logoThumb/logoThumb";
 import Footer from "./components/footer/footer";
 import Dashboard from "./components/dashboard/Dashboard";
+import Results from "./components/results/results";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   ApolloClient,
@@ -84,6 +85,11 @@ function App() {
                 <Route exact path="/contact">
                   <Hamburger />
                   <Contact />
+                  <Footer />
+                </Route>
+                <Route exact path="/results">
+                  <LoggedInHamburger />
+                  <Results />
                   <Footer />
                 </Route>
               </>
