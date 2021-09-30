@@ -251,8 +251,8 @@ body {
 #menu {
   position: absolute;
   width: 50px;
-  margin: -100px 0 0 -75px;
-  padding: 50px;
+  margin: -100px 0 0 -110px;
+  padding: 85px;
   padding-top: 125px;
 
   list-style-type: none;
