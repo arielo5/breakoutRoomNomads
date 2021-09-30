@@ -14,8 +14,8 @@ export default function LoggedInHamburger() {
           <NavLink onClick={Auth.logout} to='/'>
             <li>Logout</li>
           </NavLink>
-          <NavLink to=''>
-            <li>About</li>
+          <NavLink to='/dashboard'>
+            <li>Dashboard</li>
           </NavLink>
           <NavLink to='/contact'>
             <li>Contact</li>
