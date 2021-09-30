@@ -49,7 +49,7 @@ body {
 .newdleLogo {
   font-family: "Berkshire Swash", cursive;
   color: var(--white);
-  font-size: 300px;
+  font-size: 180px;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -67,24 +67,27 @@ body {
 
 .loginContainer {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
 }
+
 .login {
   font-family: "Architects Daughter", cursive;
   display: flex;
   color: var(--orange);
   font-size: 50px;
 }
+
 .margin {
   margin: 5px 5px;
 }
 
 .flip-card {
-
   background-color: var(--maincolor);
   width: 300px;
   height: 400px;
+  border-radius: 15px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -260,7 +263,7 @@ body {
   /* to stop flickering of text in safari */
 
   transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+  transform: translate(-400%, 0);
 
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
@@ -290,14 +293,17 @@ body {
 .profilepics {
   height: fit-content;
   width: fit-content;
+  border-radius: 10px;
+}
+
+#johnpic {
 }
 
 #contactColumn {
   flex-wrap: wrap;
-  margin-top: 100px;
-  margin-left: 100px;
 }
 
+/* Dashboard */
 #createNewPoll {
   width: 300px;
   margin: 50px;
@@ -317,3 +323,25 @@ body {
   justify-content: center;
 }
 
+#createNewPoll:hover {
+  border-color: var(--tertiary);
+  -webkit-box-shadow: 0 0 5px var(--tertiary);
+  -moz-box-shadow: 0 0 5px var(--tertiary);
+  box-shadow: 0 0 5px var(--tertiary);
+}
+
+#buttonText {
+  content: "Start a Poll";
+  font-size: 50px;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+  background-color: #060c1f;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
