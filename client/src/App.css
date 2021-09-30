@@ -70,6 +70,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
+
 .login {
   font-family: "Architects Daughter", cursive;
   display: flex;
