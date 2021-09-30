@@ -49,7 +49,7 @@ body {
 .newdleLogo {
   font-family: "Berkshire Swash", cursive;
   color: var(--white);
-  font-size: 300px;
+  font-size: 180px;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -67,6 +67,7 @@ body {
 
 .loginContainer {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
 }
@@ -77,6 +78,7 @@ body {
   color: var(--orange);
   font-size: 50px;
 }
+
 .margin {
   margin: 5px 5px;
 }
