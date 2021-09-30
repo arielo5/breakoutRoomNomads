@@ -5,7 +5,7 @@ import Login from "./components/login/Login";
 import Title from "./components/title/title";
 import VotePage from "./components/votePage/votePage";
 import Hamburger from "./components/navbar/Hamburger";
-import Contact from "./components/contact/contact"
+import Contact from "./components/contact/contact";
 import LoggedInHamburger from "./components/navbar/LoggedInHamburger";
 import LogoThumb from "./components/logoThumb/logoThumb";
 import Footer from "./components/footer/footer";
@@ -44,7 +44,6 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Switch>
@@ -62,11 +61,11 @@ function App() {
                 />
               </>
             </Route>
-            <Route exact path="/contact">
+            {/* <Route exact path="/contact">
               <Hamburger />
               <Contact />
               <Footer />
-            </Route>
+            </Route> */}
             {auth.loggedIn() ? (
               <>
                 <Route exact path="/dashboard">
@@ -82,7 +81,13 @@ function App() {
                   <VotePage />
                   <Footer />
                 </Route>
-              </>) : (
+                <Route exact path="/contact">
+                  <LoggedInHamburger />
+                  <Contact />
+                  <Footer />
+                </Route>
+              </>
+            ) : (
               <Route exact path="/">
                 <Hamburger />
                 <HomepageLogo />
