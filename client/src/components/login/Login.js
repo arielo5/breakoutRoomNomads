@@ -1,41 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import Auth from "../../utils/auth";
 import { useMutation } from "@apollo/react-hooks";
 import { LOGIN } from "../../utils/mutations";
 import { ADD_USER } from "../../utils/mutations";
 
-export default function Login() {
-  const [userFormData, setUserFormData] = useState({ email: "", password: "" });
+export default function Login(props) {
+  const [userFormData, setUserFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-  const [login, { error }] = useMutation(LOGIN);
-  const [addUser, { err }] = useMutation(ADD_USER);
+  const [login, { data: loggedIn, error }] = useMutation(LOGIN);
+  const [addUser, { data: userCreated, error: err }] =
+    useMutation(ADD_USER);
+
+  //removed loading from object in line 18 --> as it is never called
+  // const [addUser, { data: userCreated, loading, error: err }] =
+  // useMutation(ADD_USER);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
   };
 
-  const handleFormSubmit = async (event) => {
+  const handleFormSubmit = (form, event) => {
     event.preventDefault();
 
-    try {
-      const { dataL } = await login({ variables: { ...userFormData } });
-      console.log(dataL);
-      Auth.login(dataL.login.token);
-    } catch (err) {
-      console.error(err);
-      setShowAlert(true);
-    }
-
-    try {
-      const { dataA } = await addUser({ variables: { ...userFormData } });
-      console.log(dataA);
-      Auth.login(dataA.addUser.token);
-    } catch (err) {
-      console.error(err);
-      setShowAlert(true);
+    if (form === "login") {
+      login({ variables: { ...userFormData } });
+    } else if (form === "signup") {
+      addUser({ variables: { ...userFormData } });
     }
 
     setUserFormData({
@@ -45,6 +43,15 @@ export default function Login() {
       password: "",
     });
   };
+
+  useEffect(() => {
+    if (loggedIn?.login?.token?.length > 0 || userCreated?.addUser?.token?.length > 0) {
+      Auth.login(
+        loggedIn ? loggedIn.login.token : userCreated ? userCreated.addUser.token : ""
+      );
+      props.setLoggedIn()
+    }
+  }, [props, loggedIn, userCreated]);
 
   return (
     <div className="loginContainer">
@@ -64,7 +71,7 @@ export default function Login() {
               <Form
                 noValidate
                 validated={validated}
-                onSubmit={handleFormSubmit}
+                onSubmit={(e) => handleFormSubmit("login", e)}
               >
                 <Alert
                   dismissible
@@ -138,7 +145,7 @@ export default function Login() {
               <Form
                 noValidate
                 validated={validated}
-                onSubmit={handleFormSubmit}
+                onSubmit={(e) => handleFormSubmit("signup", e)}
               >
                 {/* show alert if server response is bad */}
                 <Alert
@@ -151,7 +158,7 @@ export default function Login() {
                 </Alert>
 
                 <Form.Group>
-                <div className="margin">Name:</div>
+                  <div className="margin">Name:</div>
                   <Form.Control
                     type="text"
                     placeholder="Your Name"
@@ -166,7 +173,7 @@ export default function Login() {
                 </Form.Group>
 
                 <Form.Group>
-                <div className="margin">Last Name:</div>
+                  <div className="margin">Last Name:</div>
                   <Form.Control
                     type="text"
                     placeholder="Your Last Name"
@@ -181,7 +188,7 @@ export default function Login() {
                 </Form.Group>
 
                 <Form.Group>
-                <div className="margin">Email:</div>
+                  <div className="margin">Email:</div>
                   <Form.Control
                     type="email"
                     placeholder="Your email address"
@@ -196,7 +203,7 @@ export default function Login() {
                 </Form.Group>
 
                 <Form.Group>
-                <div className="margin">Password:</div>
+                  <div className="margin">Password:</div>
                   <Form.Control
                     type="password"
                     placeholder="Your password"

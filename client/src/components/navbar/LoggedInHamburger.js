@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Auth from '../../utils/auth';
 
 export default function LoggedInHamburger() {
   return (
@@ -10,13 +11,13 @@ export default function LoggedInHamburger() {
         <span></span>
         <span></span>
         <ul id="menu">
-          <NavLink to='/'>
+          <NavLink onClick={Auth.logout} to='/'>
             <li>Logout</li>
           </NavLink>
-          <NavLink to=''>
-            <li>About</li>
+          <NavLink to='/dashboard'>
+            <li>Dashboard</li>
           </NavLink>
-          <NavLink to=''>
+          <NavLink to='/contact'>
             <li>Contact</li>
           </NavLink>
         </ul>
