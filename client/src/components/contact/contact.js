@@ -16,10 +16,10 @@ function Contact() {
     return (
         <div className="peopleContainer">
             <div className="columns is-mobile is-multiline is-centered is-vcentered" id="contactColumn">
-                <div className='column is-narrow'>
+                <div className='column is-narrow contactColumn'>
                     <div className="flip-card">
+                        <h3 className='contactName card-header-title'>Rhyce Erickson</h3>
                         <div className="flip-card-inner">
-                            <h3 className='contactName card-header-title'>Rhyce Erickson</h3>
                             <div className="flip-card-front">
                                 <img className='profilepics card-image' src={rhyce} alt='rhyce' />
                             </div>
@@ -44,10 +44,10 @@ function Contact() {
                     </div>
                 </div>
 
-                <div className='column is-narrow'>
+                <div className='column is-narrow contactColumn'>
                     <div className="flip-card">
+                        <h3 className='contactName card-header-title'>Clay Holland</h3>
                         <div className="flip-card-inner">
-                            <h3 className='contactName card-header-title'>Clay Holland</h3>
                             <div className="flip-card-front">
                                 <img className='profilepics card-image' src={clay} alt='clay' />
                             </div>
@@ -69,10 +69,10 @@ function Contact() {
                     </div>
                 </div>
 
-                <div className='column is-narrow'>
+                <div className='column is-narrow contactColumn'>
                     <div className="flip-card">
+                        <h3 className='contactName card-header-title'>John Hope</h3>
                         <div className="flip-card-inner">
-                            <h3 className='contactName card-header-title'>John Hope</h3>
                             <div className="flip-card-front">
                                 <img className='profilepics card-image' id='johnpic' src={john} alt='john' />
                             </div>
@@ -94,10 +94,10 @@ function Contact() {
                     </div>
                 </div>
 
-                <div className='column is-narrow'>
+                <div className='column is-narrow contactColumn'>
                     <div className="flip-card">
+                        <h3 className='contactName card-header-title'>Eli Miernicki</h3>
                         <div className="flip-card-inner">
-                            <h3 className='contactName card-header-title'>Eli Miernicki</h3>
                             <div className="flip-card-front">
                                 <img className='profilepics card-image' src={eli} alt='eli' />
                             </div>
@@ -117,10 +117,10 @@ function Contact() {
                     </div>
                 </div>
 
-                <div className='column is-narrow'>
+                <div className='column is-narrow contactColumn'>
                     <div className="flip-card">
+                        <h3 className='contactName card-header-title'>Ariel Martinez</h3>
                         <div className="flip-card-inner">
-                            <h3 className='contactName card-header-title'>Ariel Martinez</h3>
                             <div className="flip-card-front">
                                 <img className='profilepics card-image' src={ari} alt='ari' />
                             </div>
