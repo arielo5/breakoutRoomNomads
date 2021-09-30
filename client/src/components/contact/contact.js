@@ -74,7 +74,7 @@ function Contact() {
                         <div className="flip-card-inner">
                             <h3 className='contactName card-header-title'>John Hope</h3>
                             <div className="flip-card-front">
-                                <img className='profilepics card-image' src={john} alt='john' />
+                                <img className='profilepics card-image' id='johnpic' src={john} alt='john' />
                             </div>
                             <div className="flip-card-back">
                                 <ul>

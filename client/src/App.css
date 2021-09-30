@@ -84,6 +84,7 @@ body {
   background-color: var(--maincolor);
   width: 300px;
   height: 400px;
+  border-radius: 15px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -289,14 +290,17 @@ body {
 .profilepics {
   height: fit-content;
   width: fit-content;
+  border-radius: 10px;
+}
+
+#johnpic {
 }
 
 #contactColumn {
   flex-wrap: wrap;
-  margin-top: 100px;
-  margin-left: 100px;
 }
 
+/* Dashboard */
 #createNewPoll {
   width: 300px;
   margin: 50px;
