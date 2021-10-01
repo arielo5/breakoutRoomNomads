@@ -1,0 +1,30 @@
+* {
+    --maincolor: #334257;
+    --orange: #FF9B42;
+    --tertiary: #548ca8;;
+    --bloop: #00aeef;
+    --white: #EEEEEE;
+    }
+    a:hover {
+    color: var(--orange)
+    }
+    section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    button {
+    margin: 15px;
+    }
+    .whiteText {
+    color: var(--white)
+    }
+    hr {
+    background-color: var(--tertiary);
+    height: 2px;
+    width: 500px;
+    }
+    h1, h2, h3, h4 {
+    color: var(--orange)
+    }
