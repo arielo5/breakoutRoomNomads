@@ -10,6 +10,15 @@ export const QUERY_USER = gql`
       
     }
   }
+
+  query poll {
+    poll {
+      _id
+      pollName
+      pollOp
+      
+    }
+  }
 `;
 
 // pollCount

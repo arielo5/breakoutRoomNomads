@@ -39,15 +39,10 @@ export const ADD_USER = gql`
 `;
 
 export const SAVE_POLL = gql`
-  mutation savePoll($input: PollInput) {
-    savePoll(input: $input) {
-      _id
-      firstName
-      lastName
-      email
-      pollCount
-      savedPolls {
-        pollId
+  mutation savePoll($pollName: String!, $pollOp: [String!]) {
+    savePoll(pollName: $pollName, pollOp: $pollOp) {
+      poll {
+        _id
         pollName
         pollOp
       }

@@ -1,4 +1,4 @@
-const { User } = require("../models");
+const { User, Poll } = require("../models");
 const { signToken } = require("../utils/auth");
 const { AuthenticationError } = require("apollo-server-express");
 const { convertNodeHttpToRequest } = require("apollo-server-core");
@@ -42,16 +42,25 @@ const resolvers = {
         return { token, user };
       },
 
-      savePoll: async (parent, {input}, context) =>{
-        if (context.user) {
-          const updateUser = await User.findByIdAndUpdate(
-            { _id: context.user._id },
-            { $push: { savedPolls: input } },
-            { new: true }
-          );
-          return updateUser;
-        }
-        throw new AuthenticationError("You need to be log in!");
+      // savePoll: async (parent, {input}, context) =>{
+      //   if (context.user) {
+      //     const updateUser = await User.findByIdAndUpdate(
+      //       { _id: context.user._id },
+      //       { $push: { savedPolls: input } },
+      //       { new: true }
+      //     );
+      //     return updateUser;
+      //   }
+      //   throw new AuthenticationError("You need to be log in!");
+      // },
+
+      savePoll: async (parent, args) => {
+        console.log("WOO Args", args);
+        const poll = await Poll.create(args);
+        console.log("UH", poll);
+        const token = await signToken(poll);
+  
+        return { token, poll };
       },
 
       removePoll: async ( parent, args, context ) => {
