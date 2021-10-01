@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../container/container";
 
 // import { useMutation } from "@apollo/react-hooks";
@@ -8,25 +8,22 @@ import Container from "../container/container";
 
 let choices = [
   {
-      name: "Spaghetti and Meatballs"
-  },
-  {
-      name: "Pizza Pie"
-  },{
-      name: "Hot Peanuts and Mustard"
-  },{
-      name: "Warm Gin"
-  },{
-      name: "Day Old Bread"
+    name: "choice"
   }
 ];
 
 export default function VotePage() {
+  const [choicearray, updateChoicearray] = useState(choices);
+
   const addOption = () => {
     const userInput = document.getElementById("userinput");
-    console.log("Motherfucker", userInput.value);
     choices.push( {name: userInput.value});
-    console.log("The pushed array", choices);
+    userInput.value = "";
+
+    const items = Array.from(choicearray);
+    updateChoicearray(items);
+    choices = choicearray;
+    console.log(choices);
   };
   
   return (
@@ -48,14 +45,14 @@ export default function VotePage() {
             <textarea className="textarea is-large" placeholder="Enter your suggestion." id="userinput"></textarea>
           </div>
         </div>
-        <button className="button is-large is-fullwidth" type="submit" style={{margin: "0"}} onClick={() => addOption() }>
+        <button className="button is-large is-fullwidth" type="submit" style={{margin: "0"}} onClick={() => addOption()}>
           List it!
         </button>
       </div>
       <div className="column is-1"></div>
       <div className="column is-5">
-        <Container choices={choices} />
-        <button className="button is-large is-fullwidth" type="submit">Vote!</button>
+        <Container choices={choices}/>
+        <button className="button is-large is-fullwidth" style={{margin: "0"}} type="submit">Vote!</button>
       </div>
       <div className="column is-1"></div>
     </div>

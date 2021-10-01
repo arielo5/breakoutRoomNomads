@@ -1,10 +1,8 @@
-import React, { useState, componentDidUpdate } from "react";
+import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 export default function Container({ choices }) {    
     const [choicearray, updateChoicearray] = useState(choices);
-    
-    console.log("WOO", choices);
 
     function handleOnDragEnd(result) {
         if (!result.destination ) return;
@@ -14,7 +12,7 @@ export default function Container({ choices }) {
 
         updateChoicearray(items);
         console.log(items);
-    };
+    }
 
     return (
         <div className="tile is-fullwidth">
