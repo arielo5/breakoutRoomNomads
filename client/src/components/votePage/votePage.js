@@ -48,7 +48,7 @@ export default function VotePage() {
             <textarea className="textarea is-large" placeholder="Enter your suggestion." id="userinput"></textarea>
           </div>
         </div>
-        <button className="button is-large is-fullwidth" type="submit" onClick={() => addOption() }>
+        <button className="button is-large is-fullwidth" type="submit" style={{margin: "0"}} onClick={() => addOption() }>
           List it!
         </button>
       </div>

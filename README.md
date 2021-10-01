@@ -23,7 +23,7 @@
 
 💻 Below is a screenshot of the application:
   
-![BORN Home]()
+![BORN Home](./images/newdle.png)
 
 
 ## Usage
