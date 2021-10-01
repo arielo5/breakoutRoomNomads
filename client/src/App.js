@@ -11,6 +11,7 @@ import LogoThumb from "./components/logoThumb/logoThumb";
 import Footer from "./components/footer/footer";
 import Dashboard from "./components/dashboard/Dashboard";
 import Results from "./components/results/results";
+import DashboardCards from "./components/dashboardCards/DashboardCards"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   ApolloClient,
@@ -55,6 +56,7 @@ function App() {
                   <LoggedInHamburger />
                   <LogoThumb />
                   <Dashboard />
+                  <DashboardCards />
                   <Footer />
                 </Route>
                 <Route exact path="/poll">
