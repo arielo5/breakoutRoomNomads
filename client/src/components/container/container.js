@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
-const choices = [
+export const choices = [
     {
         id: "1",
         name: "Spaghetti and Meatballs"
@@ -34,8 +34,8 @@ export default function Container() {
         updateChoicearray(items);
     }
     return (
-        <div class="tile is-fullwidth">
-            <article class="tile is-child notification instructions">
+        <div className="tile is-fullwidth">
+            <article className="tile is-child notification instructions">
                 <DragDropContext onDragEnd={handleOnDragEnd}>
                     <Droppable droppableId="choices">
                         {(provided) => (
@@ -44,10 +44,10 @@ export default function Container() {
                                     return (
                                         <Draggable key={id} draggableId={id} index={index} >
                                         {(provided) => (
-                                        <li class="votelist" {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
-                                            <div class="card">
-                                                <div class="card-content">
-                                                    <p class="title is-size-4">
+                                        <li className="votelist" {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
+                                            <div className="card">
+                                                <div className="card-content">
+                                                    <p className="title is-size-4">
                                                         { name }
                                                     </p>
                                                 </div>
