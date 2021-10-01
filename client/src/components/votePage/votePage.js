@@ -13,7 +13,7 @@ export default function VotePage() {
           <article className="tile is-child notification instructions">
             <p className="title">How voting works:</p>
             <div className="content">
-              Enter your suggested answer below, then add it to the list on the right.
+              Enter your suggested choices in the text box, then add them to the list.
               Once your suggestions are complete, order the list from top to bottom,
               starting with your most wanted answers.
             </div>
