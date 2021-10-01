@@ -54,7 +54,7 @@ export default function Login(props) {
   }, [props, loggedIn, userCreated]);
 
   return (
-    <div className="loginContainer">
+    <div className="loginContainer columns is-mobile is-centered is-vcentered">
       <div className="login" alt="LOGIN">
         <div className="flip-card">
           <div className="flip-card-inner">

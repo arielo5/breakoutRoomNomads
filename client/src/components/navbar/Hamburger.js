@@ -11,10 +11,10 @@ export default function Hamburger() {
         <span></span>
         <ul id="menu">
           <NavLink to='/'>
-            <li>Home</li>
+            <li>Login/SignUp</li>
           </NavLink>
           <NavLink to=''>
-            <li>About</li>
+            <li>Dashboard</li>
           </NavLink>
           <NavLink to='/contact'>
             <li>Contact</li>

@@ -10,6 +10,7 @@ import LoggedInHamburger from "./components/navbar/LoggedInHamburger";
 import LogoThumb from "./components/logoThumb/logoThumb";
 import Footer from "./components/footer/footer";
 import Dashboard from "./components/dashboard/Dashboard";
+import Results from "./components/results/results";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   ApolloClient,
@@ -47,29 +48,11 @@ function App() {
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Switch>
-            <Route exact path="/">
-              <Hamburger />
-              <HomepageLogo />
-              <>
-                <Login
-                  setLoggedIn={() => {
-                    console.log(
-                      "if there is justice in the universe this will print"
-                    );
-                    setIsLoggedIn(true);
-                  }}
-                />
-              </>
-            </Route>
-            <Route exact path="/contact">
-              <LoggedInHamburger />
-              <Contact />
-              <Footer />
-            </Route>
+            
             {auth.loggedIn() ? (
               <>
                 <Route exact path="/dashboard">
-                  <Hamburger />
+                  <LoggedInHamburger />
                   <LogoThumb />
                   <Dashboard />
                   <Footer />
@@ -86,23 +69,34 @@ function App() {
                   <Contact />
                   <Footer />
                 </Route>
+                <Route exact path="/results">
+                  <LoggedInHamburger />
+                  <Results />
+                  <Footer />
+                </Route>
               </>
             ) : (
-              <Route exact path="/">
-                <Hamburger />
-                <HomepageLogo />
-
                 <>
-                  <Login
-                    setLoggedIn={() => {
-                      console.log(
-                        "if there is justice in the universe this will print"
-                      );
-                      setIsLoggedIn(true);
-                    }}
-                  />
+                <Route exact path="/">
+              <Hamburger />
+              <HomepageLogo />
+              <>
+                <Login
+                  setLoggedIn={() => {
+                    console.log(
+                      "if there is justice in the universe this will print"
+                    );
+                    setIsLoggedIn(true);
+                  }}
+                />
+              </>
+            </Route>
+            <Route exact path="/contact">
+              <Hamburger />
+              <Contact />
+              <Footer />
+            </Route>
                 </>
-              </Route>
             )}
           </Switch>
         </div>
