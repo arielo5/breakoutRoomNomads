@@ -24,7 +24,7 @@ export default function VotePage() {
             <textarea className="textarea is-large" placeholder="Enter your suggestion." id="userinput"></textarea>
           </div>
         </div>
-        <button className="button is-large is-fullwidth" type="submit">List it!</button>
+        <button className="button is-large is-fullwidth" style={{margin: "0"}}type="submit">List it!</button>
       </div>
       <div className="column is-1"></div>
       <div className="column is-5">
