@@ -8,8 +8,8 @@ const typeDefs = gql`
     email: String 
   }
 
-  input Poll {
-    pollId: ID
+  type Poll {
+    _id: ID
     pollName: String
     pollOp: [String]
   }
@@ -37,10 +37,15 @@ const typeDefs = gql`
     user: User
   }
 
+  type NewPoll {
+    token: String
+    poll: Poll
+  }
+
   type Mutation {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    savePoll(input: PollInput): User
+    savePoll(pollName: String!, pollOp: [String!]): NewPoll
     removePoll(pollId: ID!): User
   }
 `;
