@@ -1,26 +1,22 @@
 import React from "react";
 import Container from "../container/container";
-import { useMutation } from "@apollo/react-hooks";
-import { SAVE_POLL } from "../../utils/mutations";
+
+// import { useMutation } from "@apollo/react-hooks";
+// import { SAVE_POLL } from "../../utils/mutations";
 // import query
 // useQuery => data, loading
 
-const choices = [
+let choices = [
   {
-      id: "1",
       name: "Spaghetti and Meatballs"
   },
   {
-      id: "2",
       name: "Pizza Pie"
   },{
-      id: "3",
       name: "Hot Peanuts and Mustard"
   },{
-      id: "4",
       name: "Warm Gin"
   },{
-      id: "5",
       name: "Day Old Bread"
   }
 ];
@@ -29,7 +25,7 @@ export default function VotePage() {
   const addOption = () => {
     const userInput = document.getElementById("userinput");
     console.log("Motherfucker", userInput.value);
-    choices.push( {id: (choices.length +1).toString(), name: userInput.value});
+    choices.push( {name: userInput.value});
     console.log("The pushed array", choices);
   };
   

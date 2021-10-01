@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, componentDidUpdate } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 export default function Container({ choices }) {    
     const [choicearray, updateChoicearray] = useState(choices);
+    
     console.log("WOO", choices);
 
     function handleOnDragEnd(result) {
@@ -13,8 +14,6 @@ export default function Container({ choices }) {
 
         updateChoicearray(items);
         console.log(items);
-        const newChoices = items.slice();
-        console.log(newChoices);
     };
 
     return (
@@ -26,7 +25,7 @@ export default function Container({ choices }) {
                         <ul className="votechoices" {...provided.droppableProps} ref={provided.innerRef}>
                                 {choicearray.map(({name}, index) => {
                                     return (
-                                        <Draggable key={index} draggableId={name} index={index} >
+                                        <Draggable key={name} draggableId={name} index={index} >
                                         {(provided) => (
                                         <li className="votelist" {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
                                             <div className="card">
