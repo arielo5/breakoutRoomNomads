@@ -85,6 +85,7 @@ body {
 
 .flip-card {
   background-color: var(--maincolor);
+  flex-wrap: wrap;
   width: 300px;
   height: 400px;
   border-radius: 15px;
@@ -278,6 +279,10 @@ body {
  */
 #menuToggle input:checked ~ ul {
   transform: none;
+}
+
+.people {
+  margin-top: 60px;
 }
 
 /* Contact Component  */
