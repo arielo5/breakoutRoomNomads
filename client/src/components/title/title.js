@@ -9,11 +9,6 @@ export default function Title() {
           <p className="title titlebg titletext" id="pollTitle">
             What should we have for dinner tonight?
           </p>
-          <p className="subtitle titlebg titletext">
-            <i className="subtitle-text" id="username">By: Karl Baker</i>
-            <br />
-            <i className="createdate" id="createDate">Created: 09/17/21 - 10:38AM</i>
-          </p>
         </div>
         <div className="column is-3"></div>
         </div>
