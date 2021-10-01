@@ -5,7 +5,6 @@
     <img src="https://img.shields.io/github/languages/top/arerickson28/breakoutRoomNomads"  />
     <img src="https://img.shields.io/github/issues/arerickson28/breakoutRoomNomads" />
     <img src="https://img.shields.io/github/last-commit/arerickson28/breakoutRoomNomads" >
-    
 </p>
 
 <p align="center">
@@ -17,29 +16,29 @@
 
 ## Description
 
+* AS A… <br> 
+Social person with opinionated friends
 
-**[Deployed Page]()**
+* I WANT… <br> 
+An app to consolidate ideas to vote upon anonymously
 
+* SO THAT… <br>
+Decisions can be made smoothly and friendships can stay preserved
+
+## Technologies Used
+* MongoDB, Express.js, React.js, Node.js (MERN)
+* Apollo Server
+* GraphQL
+* Bulma CSS
+
+## Link to deployed app
+https://newdle.herokuapp.com/
+
+<hr>
 
 💻 Below is a screenshot of the application:
   
-![BORN Home](./images/newdle.png)
-
-
-## Usage
-
-
-## Table of Contents
-- [Description](#description)
-- [Usage](#usage)
-- [Table of Contents](#table-of-contents)
-- [Acceptance Criteria](#acceptance-criteria)
-- [Questions](#questions)
-- [License](#license)
-
- ## Acceptance Criteria
-
-## Questions
+![BORN Home](./images/newdle1.png)
 
 ## License
 
