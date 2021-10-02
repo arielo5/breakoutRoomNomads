@@ -1,13 +1,13 @@
 import React from "react";
-import { NavLink} from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_POLL } from "../../utils/queries";
 
-export default function DashboardCards() {
+export default function DashboardCards(poll) {
   const { data } = useQuery(QUERY_POLL);
   const pollList = data?.polls || [];
   console.log(pollList)
-
+  // const _id = pollList.map((poll) => poll._id)
   return (
         <div>
           {pollList.map((poll) => {
@@ -17,12 +17,12 @@ export default function DashboardCards() {
                   <p className="title" key={poll._id} value={poll.pollName}>
                     {poll.pollName}
                   </p>
-                  <p className="subtitle">Jeff Atwood</p>
                 </div>
                 <footer className="card-footer">
+                  
                   <p className="card-footer-item">
-                    <NavLink to="/poll">Vote!</NavLink>
-                  </p>
+                  <Link to={{pathname: `/poll/${poll._id}`}}>Vote!</Link>
+                  </p>;
                 </footer>
               </div>
             );
