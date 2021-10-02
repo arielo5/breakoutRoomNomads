@@ -1,4 +1,4 @@
-import { gql } from "graphql-tag";
+import { gql } from "@apollo/client";
 
 export const QUERY_USER = gql`
   query user {
@@ -11,8 +11,12 @@ export const QUERY_USER = gql`
     }
   }
 
-  query poll {
-    poll {
+  ` 
+  
+export const QUERY_POLL = gql`
+
+query polls {
+    polls {
       _id
       pollName
       pollOp
@@ -20,10 +24,3 @@ export const QUERY_USER = gql`
     }
   }
 `;
-
-// pollCount
-//       savedPolls {
-//         pollId
-//         pollName
-//         pollOp
-//       }
