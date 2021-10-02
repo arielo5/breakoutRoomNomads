@@ -9,7 +9,7 @@ import Container from "../container/container";
 
 let choices = [
     {
-        name: "choice"
+        name: "Let everyone else decide!"
     }
 ];
 
@@ -56,4 +56,4 @@ export default function VotePage() {
       <div className="column is-1"></div>
     </div>
   );
-}
+};
