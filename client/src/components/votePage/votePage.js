@@ -6,24 +6,23 @@ import Container from "../container/container";
 // import query
 // useQuery => data, loading
 
+
 let choices = [
-  {
-    name: "choice"
-  }
+    {
+        name: "choice"
+    }
 ];
+
 
 export default function VotePage() {
   const [choicearray, updateChoicearray] = useState(choices);
 
   const addOption = () => {
     const userInput = document.getElementById("userinput");
-    choices.push( {name: userInput.value});
-    userInput.value = "";
-
-    const items = Array.from(choicearray);
-    updateChoicearray(items);
-    choices = choicearray;
+    choices.push({ name: userInput.value});
+    updateChoicearray(choices => [...choices, {name: userInput.value}]);
     console.log(choices);
+    userInput.value = "";
   };
   
   return (
@@ -51,7 +50,7 @@ export default function VotePage() {
       </div>
       <div className="column is-1"></div>
       <div className="column is-5">
-        <Container choices={choices}/>
+        <Container choices={choicearray}/>
         <button className="button is-large is-fullwidth" style={{margin: "0"}} type="submit">Vote!</button>
       </div>
       <div className="column is-1"></div>
