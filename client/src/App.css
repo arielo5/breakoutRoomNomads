@@ -8,6 +8,10 @@
   --white: #eeeeee;
 }
 
+has-background-primary {
+  background-color: var(--bloop);
+}
+
 body {
   background-color: var(--maincolor);
   min-height: 100vh;
