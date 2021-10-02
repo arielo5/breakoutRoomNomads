@@ -8,8 +8,9 @@
   --white: #eeeeee;
 }
 
-has-background-primary {
-  background-color: var(--bloop);
+.bg-footer {
+  background-color: var(--tertiary);
+  color: var(--white);
 }
 
 body {
