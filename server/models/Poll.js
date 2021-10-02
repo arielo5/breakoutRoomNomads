@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+const {Schema, model} = require("mongoose");
 
-const Schema = mongoose.Schema;
+// const Schema = mongoose.Schema;
 
 const pollSchema = new Schema({
     pollName: {
@@ -10,10 +10,10 @@ const pollSchema = new Schema({
     },
     pollOp: {
         type: Array,
-        required: true,
+        required: false,
     }
 })
 
-const Poll = mongoose.model("Polls", pollSchema);
+const Poll = model("Polls", pollSchema);
 
 module.exports = Poll;

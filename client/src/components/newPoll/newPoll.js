@@ -4,7 +4,7 @@ import "../../App.css"
 import "./newPoll.css"
 import Auth from "../../utils/auth";
 import { SAVE_POLL } from "../../utils/mutations"
-import { useMutation } from "@apollo/react-hooks";
+import { useQuery, useMutation } from "@apollo/react-hooks";
 
 function NewPoll(props) {
 

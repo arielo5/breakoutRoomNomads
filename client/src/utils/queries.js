@@ -10,7 +10,9 @@ export const QUERY_USER = gql`
       
     }
   }
+`;
 
+export const QUERY_POLL = gql`
   query poll {
     poll {
       _id
@@ -20,10 +22,3 @@ export const QUERY_USER = gql`
     }
   }
 `;
-
-// pollCount
-//       savedPolls {
-//         pollId
-//         pollName
-//         pollOp
-//       }
