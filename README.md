@@ -32,7 +32,7 @@ Decisions can be made smoothly and friendships can stay preserved
 * Bulma CSS
 
 ## Link to deployed app
-https://newdle.herokuapp.com/
+https://born001.herokuapp.com/
 
 <hr>
 
