@@ -59,7 +59,7 @@ function App() {
                   <DashboardCards />
                   <Footer />
                 </Route>
-                <Route exact path="/poll">
+                <Route path="/poll">
                   <LoggedInHamburger />
                   <LogoThumb />
                   <Title />
