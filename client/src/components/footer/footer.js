@@ -7,7 +7,7 @@ export default function Footer() {
     <br></br>
     <br></br>
     <br></br>
-      <div className="section-heading has-background-primary">
+      <div className="section-heading bg-footer">
         <p className="is-size-5 has-text-black has-text-centered">
           <a href="https://bulma.io">
             <img
