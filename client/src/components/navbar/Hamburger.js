@@ -13,9 +13,6 @@ export default function Hamburger() {
           <NavLink to='/'>
             <li>Login/SignUp</li>
           </NavLink>
-          <NavLink to=''>
-            <li>Dashboard</li>
-          </NavLink>
           <NavLink to='/contact'>
             <li>Contact</li>
           </NavLink>
