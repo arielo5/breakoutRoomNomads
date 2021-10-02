@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../container/container";
-import { choices } from "../container/container";
-import { useMutation } from "@apollo/react-hooks";
-import { SAVE_POLL } from "../../utils/mutations";
+
+// import { useMutation } from "@apollo/react-hooks";
+// import { SAVE_POLL } from "../../utils/mutations";
+// import query
+// useQuery => data, loading
+
+
+let choices = [
+    {
+        name: "choice"
+    }
+];
+
 
 export default function VotePage() {
+  const [choicearray, updateChoicearray] = useState(choices);
+
+  const addOption = () => {
+    const userInput = document.getElementById("userinput");
+    choices.push({ name: userInput.value});
+    updateChoicearray(choices => [...choices, {name: userInput.value}]);
+    console.log(choices);
+    userInput.value = "";
+  };
+  
   return (
     <div className="columns content">
       <div className="column is-1"></div>
@@ -24,11 +44,14 @@ export default function VotePage() {
             <textarea className="textarea is-large" placeholder="Enter your suggestion." id="userinput"></textarea>
           </div>
         </div>
-        <button className="button is-large is-fullwidth" style={{margin: "0"}}type="submit">List it!</button>
+        <button className="button is-large is-fullwidth" type="submit" style={{margin: "0"}} onClick={() => addOption()}>
+          List it!
+        </button>
       </div>
       <div className="column is-1"></div>
       <div className="column is-5">
-        <Container />
+        <Container choices={choicearray}/>
+        <button className="button is-large is-fullwidth" style={{margin: "0"}} type="submit">Vote!</button>
       </div>
       <div className="column is-1"></div>
     </div>
