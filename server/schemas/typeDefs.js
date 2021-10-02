@@ -35,6 +35,7 @@ const typeDefs = gql`
   type Query {
     users: [User]
     user: User
+    polls: [Poll]
   }
 
   type NewPoll {
